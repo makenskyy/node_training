@@ -37,7 +37,7 @@ exports.updateProduct = catchAsync(async (req, res) => {
 })
 
 exports.getProduct = catchAsync(async (req, res) => {
-  const product = await Product.find(req.params.id);
+  const product = await Product.findById(req.params.id);
   console.log(product)
   res.status(200).json({
     status: "success",
